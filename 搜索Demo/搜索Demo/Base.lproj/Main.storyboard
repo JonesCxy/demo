@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="06M-7c-cAl">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--默认搜索-->
+        <scene sceneID="D2l-if-JTt">
+            <objects>
+                <viewController id="o1u-oC-qdA" customClass="NDDefaultSearchViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KrF-q6-TjN"/>
+                        <viewControllerLayoutGuide type="bottom" id="43W-wX-doE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hIU-GV-Wzv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3kJ-74-bHn">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="o1u-oC-qdA" id="m37-0g-3v0"/>
+                                    <outlet property="delegate" destination="o1u-oC-qdA" id="PTo-M6-l9a"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="3kJ-74-bHn" secondAttribute="trailing" id="ATs-RW-2NK"/>
+                            <constraint firstItem="43W-wX-doE" firstAttribute="top" secondItem="3kJ-74-bHn" secondAttribute="bottom" id="MIb-sg-TJg"/>
+                            <constraint firstItem="3kJ-74-bHn" firstAttribute="leading" secondItem="hIU-GV-Wzv" secondAttribute="leading" id="Ob1-fD-RqT"/>
+                            <constraint firstItem="3kJ-74-bHn" firstAttribute="top" secondItem="KrF-q6-TjN" secondAttribute="bottom" id="raE-K9-tPi"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="默认搜索" id="Oig-Ja-FVa" userLabel="默认搜索"/>
+                    <connections>
+                        <outlet property="tableView" destination="3kJ-74-bHn" id="7xg-Em-ZPb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jlg-9u-3WA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="-832"/>
+        </scene>
+        <!--搜索Demo-->
+        <scene sceneID="nHC-a2-6Lc">
+            <objects>
+                <tableViewController id="dOb-cS-d71" userLabel="搜索Demo" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="jTG-jV-Lgz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection headerTitle="本地查询" id="1Ru-yT-Tdn">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="PFS-tz-Bzh">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PFS-tz-Bzh" id="oHq-cm-WtK">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="默认搜索" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C0s-tq-MnM">
+                                                    <rect key="frame" x="20" y="0.0" width="322" height="43.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="C0s-tq-MnM" firstAttribute="top" secondItem="oHq-cm-WtK" secondAttribute="top" id="D5e-ky-IUi"/>
+                                                <constraint firstAttribute="bottom" secondItem="C0s-tq-MnM" secondAttribute="bottom" id="Krj-Jj-J5g"/>
+                                                <constraint firstAttribute="trailing" secondItem="C0s-tq-MnM" secondAttribute="trailing" id="VLn-U6-tOq"/>
+                                                <constraint firstItem="C0s-tq-MnM" firstAttribute="leading" secondItem="oHq-cm-WtK" secondAttribute="leading" constant="20" id="pqn-Cy-vql"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="o1u-oC-qdA" kind="push" id="Xcb-cx-6n6"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="FH2-oY-LxA">
+                                        <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FH2-oY-LxA" id="0hn-cg-a92">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="默认搜索(高斯模糊背景)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U9H-1o-fXZ">
+                                                    <rect key="frame" x="20" y="0.0" width="322" height="43"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="U9H-1o-fXZ" secondAttribute="trailing" id="QQR-Ke-qlt"/>
+                                                <constraint firstAttribute="bottom" secondItem="U9H-1o-fXZ" secondAttribute="bottom" id="ZmR-qW-ZTM"/>
+                                                <constraint firstItem="U9H-1o-fXZ" firstAttribute="leading" secondItem="0hn-cg-a92" secondAttribute="leading" constant="20" id="gQf-cn-zrP"/>
+                                                <constraint firstItem="U9H-1o-fXZ" firstAttribute="top" secondItem="0hn-cg-a92" secondAttribute="top" id="zxj-8F-5pq"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="9ij-UH-1pp" kind="push" id="0yF-GR-Yko"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="GwS-5g-8kf">
+                                        <rect key="frame" x="0.0" y="116" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GwS-5g-8kf" id="Lkc-62-1F1">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="分组搜索" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OQ8-EC-5cc">
+                                                    <rect key="frame" x="20" y="0.0" width="322" height="43.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="OQ8-EC-5cc" firstAttribute="top" secondItem="Lkc-62-1F1" secondAttribute="top" id="FPZ-T3-adh"/>
+                                                <constraint firstItem="OQ8-EC-5cc" firstAttribute="leading" secondItem="Lkc-62-1F1" secondAttribute="leading" constant="20" id="WAa-l9-cAu"/>
+                                                <constraint firstAttribute="bottom" secondItem="OQ8-EC-5cc" secondAttribute="bottom" id="c6H-ci-sTk"/>
+                                                <constraint firstAttribute="trailing" secondItem="OQ8-EC-5cc" secondAttribute="trailing" id="p5b-tA-he3"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="push" id="Sgg-uD-Aj4"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="bXQ-Zo-41U">
+                                        <rect key="frame" x="0.0" y="160" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bXQ-Zo-41U" id="wny-P5-OfX">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ODM-0H-Nxw">
+                                                    <rect key="frame" x="20" y="0.0" width="355" height="43.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="ODM-0H-Nxw" secondAttribute="trailing" id="NJI-Rk-140"/>
+                                                <constraint firstItem="ODM-0H-Nxw" firstAttribute="top" secondItem="wny-P5-OfX" secondAttribute="top" id="WEn-04-ZMt"/>
+                                                <constraint firstItem="ODM-0H-Nxw" firstAttribute="leading" secondItem="wny-P5-OfX" secondAttribute="leading" constant="20" id="kWm-fA-MB9"/>
+                                                <constraint firstAttribute="bottom" secondItem="ODM-0H-Nxw" secondAttribute="bottom" id="lUz-Y3-98I"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="dOb-cS-d71" id="8Pz-WJ-IC6"/>
+                            <outlet property="delegate" destination="dOb-cS-d71" id="YSJ-mO-DeE"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="搜索Demo" id="USe-0L-e4z" userLabel="搜索Demo"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3A9-gS-jtD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-130" y="-76"/>
+        </scene>
+        <!--默认搜索(高斯模糊效果)-->
+        <scene sceneID="C8R-Gc-njF">
+            <objects>
+                <viewController id="9ij-UH-1pp" customClass="NDDefaultFuzzySearchViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gX2-py-GFA"/>
+                        <viewControllerLayoutGuide type="bottom" id="VU2-ld-cFi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RLd-0n-z3B">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="P8Z-ZY-vmP">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="9ij-UH-1pp" id="duo-eD-3hE"/>
+                                    <outlet property="delegate" destination="9ij-UH-1pp" id="0cY-c2-2YQ"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="P8Z-ZY-vmP" secondAttribute="trailing" id="3CG-2P-GPO"/>
+                            <constraint firstItem="P8Z-ZY-vmP" firstAttribute="leading" secondItem="RLd-0n-z3B" secondAttribute="leading" id="G3k-fw-XRA"/>
+                            <constraint firstAttribute="bottom" secondItem="P8Z-ZY-vmP" secondAttribute="bottom" id="VaU-5D-PbE"/>
+                            <constraint firstItem="P8Z-ZY-vmP" firstAttribute="top" secondItem="gX2-py-GFA" secondAttribute="bottom" id="t4D-w8-x2c"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="默认搜索(高斯模糊效果)" id="5FH-97-Fqn"/>
+                    <connections>
+                        <outlet property="tableView" destination="P8Z-ZY-vmP" id="O71-ld-EbH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hut-t7-hkY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="759" y="-88"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="FCG-qS-AtQ">
+            <objects>
+                <navigationController id="06M-7c-cAl" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UYx-sW-gWB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="dOb-cS-d71" kind="relationship" relationship="rootViewController" id="PDV-hX-Iwa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H8b-cU-pOr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1110" y="8"/>
+        </scene>
+        <!--分组搜索-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="NDSectionSearchViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="pUF-UG-1hG">
+                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="dxV-nv-i6c"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yzj-K3-wBl">
+                                <rect key="frame" x="0.0" y="108" width="375" height="559"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="dov-7t-A0F"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="h6E-cz-525"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="pUF-UG-1hG" secondAttribute="trailing" id="2O4-lo-Ooz"/>
+                            <constraint firstItem="pUF-UG-1hG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="DA2-6f-Zl8"/>
+                            <constraint firstItem="yzj-K3-wBl" firstAttribute="top" secondItem="pUF-UG-1hG" secondAttribute="bottom" id="RsT-2P-W4M"/>
+                            <constraint firstItem="pUF-UG-1hG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="W3P-ek-OL8"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yzj-K3-wBl" secondAttribute="bottom" id="kXd-lh-syU"/>
+                            <constraint firstItem="yzj-K3-wBl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="uA1-x1-64t"/>
+                            <constraint firstAttribute="trailing" secondItem="yzj-K3-wBl" secondAttribute="trailing" id="zZe-lY-9W5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="分组搜索" id="MwF-EC-ADE"/>
+                    <connections>
+                        <outlet property="searchBar" destination="pUF-UG-1hG" id="jRW-go-nqe"/>
+                        <outlet property="searchDisplayController" destination="4mg-Ne-eOH" id="t5y-GA-imE"/>
+                        <outlet property="tableView" destination="yzj-K3-wBl" id="0lW-9R-ie1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="4mg-Ne-eOH">
+                    <connections>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="FDr-F8-Tlc"/>
+                        <outlet property="searchBar" destination="pUF-UG-1hG" id="OKk-g4-lMS"/>
+                        <outlet property="searchContentsController" destination="BYZ-38-t0r" id="04M-XQ-pqu"/>
+                        <outlet property="searchResultsDataSource" destination="BYZ-38-t0r" id="iIb-sf-PTW"/>
+                        <outlet property="searchResultsDelegate" destination="BYZ-38-t0r" id="cl8-Ro-45h"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="466" y="696"/>
+        </scene>
+    </scenes>
+</document>
